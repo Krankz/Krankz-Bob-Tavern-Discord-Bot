@@ -18,9 +18,9 @@ BOB_QUOTES = bob_lines()
 async def on_ready():
         print(f"Created Array ({len(BOB_QUOTES)} lines)! Online!") 
 
-@client.event
-async def help(ctx):
-    await ctx.send()
+@client.command()
+async def docs(ctx):
+    await ctx.send('https://github.com/Krankz/Krankz-Bob-Tavern-Discord-Bot')
 
 @client.command()
 async def say(ctx, *, number):

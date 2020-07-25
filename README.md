@@ -1,5 +1,5 @@
 # 🍺 Bob's Tavern Textboard for Discord
-### Simply type *__$bob__* __n__, where __n__ is a number from __0__ to __38__. Alternatively, type *__$bob__* __help__ to access this page from Discord
+### Simply type *__$bob__* __n__, where __n__ is a number from __0__ to __38__. Alternatively, type *__$bob__* __docs__ to access this page from Discord
 ---
 ### Here are the list of options 
 0. What’s your strategy this time, partner?
