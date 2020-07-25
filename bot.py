@@ -1,10 +1,28 @@
 import discord
-from discord.ext import commands
+import bob
 from secret import token
-bot = commands.Bot(command_prefix='>')
+from pathlib import Path
 
-@bot.command()
-async def ping(ctx):
-    await ctx.send('pong')
+# Path to Bob's quotes.
+cwd = Path.cwd()
+bob_path = Path.joinpath(cwd, 'bobq.txt')
 
-bot.run(token)
+client = discord.Client()
+BOB_QUOTES = bob.create_array(bob_path)
+
+
+@client.event
+async def on_ready():
+    print('We have logged in as {0.user}'.format(client))
+
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+
+    if message.content.startswith('$bob help'):
+        await message.channel.send('Help!')
+    elif message.content.startswith('$bob'):
+        await message.channel.send('Exactly what were you looking for? (type $bob help)')
+
+client.run(token)
