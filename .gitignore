@@ -2,3 +2,5 @@
 venv
 .venv
 secret.py
+__pycache__
+Bartender_Bob_full.jpg
