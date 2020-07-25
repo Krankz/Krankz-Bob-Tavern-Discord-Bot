@@ -16,3 +16,10 @@ def create_array(txt):
 
 BOB_QUOTES = create_array(bob_path)
 
+def bob_printer(message):
+    if int(message) in range(0,39):
+        print(BOB_QUOTES[int(message)])
+    else:
+        print("Please enter a valid number! (0-38)")
+
+bob_printer("38")
