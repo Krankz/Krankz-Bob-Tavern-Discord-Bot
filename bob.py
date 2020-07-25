@@ -11,7 +11,7 @@ def create_array(txt):
 
 def bob_printer(message, quotes):
     if int(message) in range(0,39):
-        print(quotes[int(message)])
+        return quotes[int(message)]
     else:
-        print("Please enter a valid number! (0-38)")
+        return ("Please enter a valid number! (0-38)")
 
