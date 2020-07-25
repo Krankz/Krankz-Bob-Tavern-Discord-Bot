@@ -5,6 +5,10 @@ from pathlib import Path
 cwd = Path.cwd()
 bob_path = Path.joinpath(cwd, 'bobq.txt')
 
-# Empty list to append quotes.
-BOB_QUOTES = []
+# Open file 
+stream = open(bob_path)
 
+# Store quotes in an array
+BOB_QUOTES = stream.readlines()
+# Remove Whitespace.
+BOB_QUOTES = [s.strip("\n") for s in BOB_QUOTES]
