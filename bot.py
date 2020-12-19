@@ -4,8 +4,6 @@ import bob
 from pathlib import Path
 import os 
 
-token = os.environ(['TOKEN'])
-
 def bob_lines():
     cwd = Path.cwd()
     bob_path = Path.joinpath(cwd, 'bobq.txt')
@@ -28,4 +26,4 @@ async def docs(ctx):
 async def say(ctx, *, number):
     await ctx.send(bob.bob_printer(number, BOB_QUOTES))
 
-client.run(token)
+client.run(os.environ['TOKEN'])
