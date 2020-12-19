@@ -1,7 +1,6 @@
 import discord
 from discord.ext import commands
 import bob
-from secret import token
 from pathlib import Path
 import os 
 
