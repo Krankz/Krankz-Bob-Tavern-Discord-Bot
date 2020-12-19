@@ -3,6 +3,9 @@ from discord.ext import commands
 import bob
 from secret import token
 from pathlib import Path
+import os 
+
+token = os.environ(['TOKEN'])
 
 def bob_lines():
     cwd = Path.cwd()
